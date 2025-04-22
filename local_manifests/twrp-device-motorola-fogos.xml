@@ -1,1 +1,5 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <!-- Link to your TWRP device tree -->
+    <project path="device/motorola/fogos" name="masterbullet/twrp_device_motorola_fogos" remote="github" revision="main" />
+</manifest>
