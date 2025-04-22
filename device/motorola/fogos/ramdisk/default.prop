@@ -1,0 +1,7 @@
+# Default properties
+ro.product.device=fogos
+ro.product.model=Moto G 5G (2024)
+ro.build.product=fogos
+ro.build.description=fogos-user 10 QP1A.190711.020 123456 release-keys
+ro.build.version.sdk=30
+ro.build.id=QP1A.190711.020
