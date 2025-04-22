@@ -16,25 +16,25 @@ jobs:
     - name: Set up JDK 11
       uses: actions/setup-java@v2
       with:
-        distribution: 'temurin'  # Adoptium's Temurin JDK 11
+        distribution: 'temurin'  # Correct distribution for JDK 11
         java-version: '11'
 
     - name: Set up environment
       run: |
-        # Install dependencies for building TWRP
+        # Install necessary build dependencies
         sudo apt-get update
         sudo apt-get install -y build-essential gcc g++ make python3
 
     - name: Build TWRP
       run: |
-        # Navigate to your TWRP source folder
-        cd twrp-for-moto-g5g  # Adjust this path if your repo folder is named differently
+        # Navigate to the TWRP source folder
+        cd oxygen_recovery  # Your repository name here
         source build/envsetup.sh
-        lunch twrp_fogos-userdebug  # Modify this based on your device
-        make recoveryimage  # Build the recovery image (you can replace this with your correct build command)
+        lunch twrp_fogos-userdebug  # Replace with the correct lunch combo
+        make recoveryimage  # Modify this command as per your build setup
 
     - name: Upload TWRP Image as artifact
       uses: actions/upload-artifact@v2
       with:
         name: twrp-image
-        path: out/target/product/fogos/twrp.img  # Adjust this path to point to the correct recovery image
+        path: out/target/product/fogos/twrp.img  # Correct path to the built TWRP image
