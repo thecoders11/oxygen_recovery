@@ -1,0 +1,5 @@
+/dev/block/bootdevice/by-name/system     /system     ext4    ro
+/dev/block/bootdevice/by-name/data       /data       ext4    noatime,nosuid,nodev
+/dev/block/bootdevice/by-name/cache      /cache      ext4    noatime,nosuid,nodev
+/dev/block/bootdevice/by-name/metadata   /metadata   ext4    defaults
+/dev/block/bootdevice/by-name/vendor     /vendor     ext4    ro
